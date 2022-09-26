@@ -1,4 +1,4 @@
-apiVersion: app/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vprodb
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: vprofile/vprofiledb:app/V1
+          image: vprofile/vprofiledb:V1
           args: 
             - "ignore-db-dir=lost+found"
           volumeMounts:
